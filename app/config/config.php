@@ -13,6 +13,6 @@ return new \Phalcon\Config(array(
 		'modelsDir'      => __DIR__ . '/../../app/models/',
 		'viewsDir'       => __DIR__ . '/../../app/views/',
 		'libraryDir'     => __DIR__ . '/../../app/libraries/',
-		'baseUri'        => '/single-skeleton/',
+		'baseUri'        => '/',
 	)
 ));
