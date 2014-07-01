@@ -1,4 +1,4 @@
-Social Authentication with Hybridauth and Phalcon PHP
+Social Authentication for Phalcon PHP
 =========================================================================
 
 About
@@ -9,16 +9,21 @@ This is based on the [single module skeleton app from Phalcon's repository](http
 
 Utilising the excellent [Hybridauth](http://hybridauth.sourceforge.net/) social authentication library and their [simple example](http://hybridauth.sourceforge.net/userguide/Integrating_HybridAuth_SignIn.html.) code.
 
+**This example utilises the Twitter sign in API but the process is the same for any supported provider. See the [hybridauth documentation](http://hybridauth.sourceforge.net/userguide.html) for other examples and list of supported providers.**
 
 Requirements
 ------------
-A working [PhalconPHP](http://phalconphp.com/) installation.
+A working [PhalconPHP](http://phalconphp.com/) installation which is accessible from the web.
 
-An API Key and Secret for each sign in provider you wish to use.
+An API Key and Secret for Twitter. 
 
-Sign in provider callback URL will be <yourdomain>/auth
-(Obviously social sign in will not work when the code is hosted locally)
+Twitter callback URL should be set to **http://[ yourdomain ]/auth** when requesting your API keys.
+
+(Obviously social sign in will not work if the code is hosted locally.)
 
 Installation
 ------------
-*	Edit app/libraries
+1.	Edit app/libraries/hybridauth/config.php adding the base url (this should be the url to the auth controller I.E **http://[ yourdomain ]/auth**) and API keys.
+2.	Upload to webroot.
+3.	Visit http://[ yourdomain ]
+4.	Profit.
