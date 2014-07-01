@@ -11,7 +11,10 @@ Utilising the excellent [Hybridauth](http://hybridauth.sourceforge.net/) social 
 
 **This example utilises the Twitter sign in API but the process is the same for any supported provider. See the [hybridauth documentation](http://hybridauth.sourceforge.net/userguide.html) for other examples and list of supported providers.**
 
+
 All I have done is merge the two "basic examples" mentioned above so they work together, there is nothing original here.
+
+I have assumed that you know how to go on and integrate this into an app. 
 
 Special thanks to my clipboard.
 
