@@ -11,6 +11,10 @@ Utilising the excellent [Hybridauth](http://hybridauth.sourceforge.net/) social 
 
 **This example utilises the Twitter sign in API but the process is the same for any supported provider. See the [hybridauth documentation](http://hybridauth.sourceforge.net/userguide.html) for other examples and list of supported providers.**
 
+All I have done is merge the two "basic examples" mentioned above so they work together, there is nothing original here.
+
+Special thanks to my clipboard.
+
 Requirements
 ------------
 A working [PhalconPHP](http://phalconphp.com/) installation which is accessible from the web.
@@ -27,3 +31,4 @@ Installation
 2.	Upload to webroot.
 3.	Visit http://[ yourdomain ]
 4.	Profit.
+
