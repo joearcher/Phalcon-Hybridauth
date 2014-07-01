@@ -1,5 +1,5 @@
 <?php
-
+use Phalcon\Session\Adapter\Files as SessionAdapter;
 /**
  * The FactoryDefault Dependency Injector automatically register the right services providing a full stack framework
  */
@@ -38,3 +38,8 @@ $di->set('db', function() use ($config) {
 /**
  * Start the session the first time some component request the session service
  */
+$di->set('session', function () {
+    $session = new SessionAdapter();
+    $session->start();
+    return $session;
+});
