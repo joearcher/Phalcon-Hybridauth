@@ -1,3 +1,9 @@
-<h1>Congratulations!</h1>
+<?php if($auth['status'] == 0) {?>
+	<h1>You are not logged in via twitter</h1>
+	<a href="/login">Log in with twitter</a>
+<?}else{?>
+	<h1><img src="<?php echo $auth['profile']['pic']?>"> Hello <?php echo $auth['profile']['username']?></h1>
+	
+	<a href="/login/logout">Log out</a>
+<?}?>
 
-<p>You're now flying with Phalcon.</p>
