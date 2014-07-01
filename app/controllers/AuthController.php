@@ -3,8 +3,8 @@
 class AuthController extends ControllerBase
 {
 	function IndexAction(){
-		require_once( "Hybrid/Auth.php" );
-		require_once( "Hybrid/Endpoint.php" ); 
+		require_once( "hybridauth/Hybrid/Auth.php" );
+		require_once( "hybridauth/Hybrid/Endpoint.php" ); 
 
 		Hybrid_Endpoint::process();
 	}

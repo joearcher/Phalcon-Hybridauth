@@ -5,8 +5,8 @@ class IndexController extends ControllerBase
 
     public function indexAction()
     {
-    	$config   = dirname(__DIR__) . '/libraries/config.php';
-  		require_once( "Hybrid/Auth.php" );
+    	$config   = dirname(__DIR__) . '/libraries/hybridauth/config.php';
+  		require_once( "hybridauth/Hybrid/Auth.php" );
   
 	  try{
 	  	// create an instance for Hybridauth with the configuration file path as parameter

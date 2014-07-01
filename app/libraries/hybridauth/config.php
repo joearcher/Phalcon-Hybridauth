@@ -11,7 +11,7 @@
 
 return 
 	array(
-		"base_url" => "http://properwebsites.com/auth", 
+		"base_url" => "<URL TO THE AUTH CONTOLLER>", 
 
 		"providers" => array ( 
 			// openid providers
