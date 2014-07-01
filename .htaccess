@@ -1,3 +1,4 @@
+#direct all requests to the front end
 <IfModule mod_rewrite.c>
 	RewriteEngine on
 	RewriteRule  ^$ public/    [L]
