@@ -2,18 +2,22 @@
 
 class LoginController extends ControllerBase
 {
-	public function indexAction(){
+	public function __construct(){
 		$config   = dirname(__DIR__) . '/libraries/hybridauth/config.php';
   		require_once( "hybridauth/Hybrid/Auth.php" );
-  
+		$this->hybridauth = new Hybrid_Auth( $config );
+	}
+	public function indexAction(){
+		
+  		
 	  try{
 	  	// create an instance for Hybridauth with the configuration file path as parameter
-	  	$hybridauth = new Hybrid_Auth( $config );
+	  	$this->hybridauth = new Hybrid_Auth( $config );
 	  
 	  	// try to authenticate the user with twitter, 
 	  	// user will be redirected to Twitter for authentication, 
 	  	// if he already did, then Hybridauth will ignore this step and return an instance of the adapter
-	  	$twitter = $hybridauth->authenticate( "Twitter" );  
+	  	$twitter = $this->hybridauth->authenticate( "Twitter" );  
 	 
 	  	// get the user profile 
 	  	$twitter_user_profile = $twitter->getUserProfile();
@@ -56,6 +60,7 @@ class LoginController extends ControllerBase
 
 	public function logoutAction(){
 		$this->session->remove('auth-identity');
+		$this->hybridAuth->logoutAllProviders();
 		return $this->response->redirect('');
 	}
 
