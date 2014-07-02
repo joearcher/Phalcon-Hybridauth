@@ -61,7 +61,7 @@ class LoginController extends ControllerBase
 
 	public function logoutAction(){
 		$this->session->remove('auth-identity');
-		$this->hybridAuth->logoutAllProviders();
+		$this->hybridauth->logoutAllProviders();
 		return $this->response->redirect('');
 	}
 
