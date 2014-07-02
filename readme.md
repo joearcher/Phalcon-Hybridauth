@@ -28,10 +28,13 @@ Twitter callback URL should be set to **http://[ yourdomain ]/auth** when reques
 
 (Obviously social sign in will not work if the code is hosted locally.)
 
+
 Installation
 ------------
 1.	Edit app/libraries/hybridauth/config.php adding the base url (this should be the url to the auth controller I.E **http://[ yourdomain ]/auth**) and API keys.
 2.	Upload to webroot.
 3.	Visit http://[ yourdomain ]
 4.	Profit.
+
+
 
