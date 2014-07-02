@@ -14,7 +14,6 @@ class LoginController extends ControllerBase
   		
 	  try{
 	  	// create an instance for Hybridauth with the configuration file path as parameter
-	  	$this->hybridauth = new Hybrid_Auth( $config );
 	  
 	  	// try to authenticate the user with twitter, 
 	  	// user will be redirected to Twitter for authentication, 
