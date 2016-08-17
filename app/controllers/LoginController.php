@@ -24,10 +24,10 @@ class LoginController extends ControllerBase
 	  	$twitter_user_profile = $twitter->getUserProfile();
 	  
 	  	$this->session->set('auth-identity', array(
-            'id' => $twitter_user_profile->identifier,
-            'username' => $twitter_user_profile->displayName,
-            'pic' => $twitter_user_profile->photoURL
-        ));
+	            'id' => $twitter_user_profile->identifier,
+	            'username' => $twitter_user_profile->displayName,
+	            'pic' => $twitter_user_profile->photoURL
+	        ));
 	 	
 	 	 return $this->response->redirect('');
 	  	 
